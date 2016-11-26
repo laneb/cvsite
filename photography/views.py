@@ -16,6 +16,8 @@ def project(request):
       "http://lanebarlow.s3.amazonaws.com/_MG_0998.jpg",
       "http://lanebarlow.s3.amazonaws.com/_MG_1001.jpg",
       "http://lanebarlow.s3.amazonaws.com/_MG_2154.jpg"
-    ]
+    ],
+    'photo_height': 624,
+    'photo_width': 926
   }
   return HttpResponse(template.render(context, request))
