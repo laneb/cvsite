@@ -20,8 +20,8 @@ from . import views
 
 urlpatterns = [
 	url(r'^$', views.index, name='index'),
-    url(r'^mathematics/', include('mathematics.urls')),
-    url(r'^programming/', include('programming.urls')),
-    url(r'^photography/', include('photography.urls')),
-    url(r'^admin/', admin.site.urls),
+  url(r'^mathematics/', include('mathematics.urls')),
+  url(r'^programming/', include('programming.urls')),
+  url(r'^photography/', include('photography.urls')),
+  url(r'^admin/', admin.site.urls),
 ]
