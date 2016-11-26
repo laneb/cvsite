@@ -13,9 +13,19 @@ def project(request):
   context = {
     'project_name': 'Power Lines',
     'images': [
-      "http://lanebarlow.s3.amazonaws.com/_MG_0998.jpg",
-      "http://lanebarlow.s3.amazonaws.com/_MG_1001.jpg",
-      "http://lanebarlow.s3.amazonaws.com/_MG_2154.jpg"
+      {
+        'url': "http://lanebarlow.s3.amazonaws.com/_MG_0998.jpg",
+        'title': "pwrln1",
+        'desc': 'archival inkjet on canvas'
+      },
+      {
+        'url': "http://lanebarlow.s3.amazonaws.com/_MG_1001.jpg",
+        'title': "pwrln2"
+      },
+      {
+        'url': "http://lanebarlow.s3.amazonaws.com/_MG_2154.jpg",
+        'title': "pwrln3"
+      }
     ],
     'photo_height': 624,
     'photo_width': 926

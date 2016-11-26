@@ -1,56 +1,49 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!doctype html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>{{ project_name }} - Lane Barlow </title>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<!-- optional touchswipe file to enable swipping to navigate slideshow -->
-<script type="text/javascript" src="/static/jquery.touchSwipe.min.js"></script>
+  <title>{{ project_name }} - Lane Barlow </title>
+  
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
 
-<style>
-
-#fadeshow4 .gallerylayer img{ /* make all images inside fadeshow4 scale to 100% of slideshow width */
-width: 100%;
-height: auto;
-}
-
-</style>
-
-<script type="text/javascript" src="/static/fadeslideshow.js">
-
-/***********************************************
-* Ultimate Fade In Slideshow v2.0- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
-* Please keep this notice intact
-* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
-***********************************************/
-
-</script>
-
-<script type="text/javascript">
-
-var mygallery=new fadeSlideShow({
-  wrapperid: "fadeshow1", //ID of blank DIV on page to house Slideshow
-  dimensions: [{{ photo_width }}, {{ photo_height }}], //width/height of gallery in pixels. Should reflect dimensions of largest image
-  imagearray: [
-    //aggregate js definition for array photos and metadata from python array
-    {% for img in images %}
-    ["{{ img }}"],
-    {% endfor %}
-  ],
-  displaymode: {type:'manual', pause:2500, cycles:0, wraparound:false},
-  persist: false, //remember last viewed slide and recall within same session?
-  fadeduration: 0, //transition duration (milliseconds)
-  descreveal: "always",
-  togglerid: "fadeshow1toggler"
-})
-
-
-</script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
 
 </head>
-<div align="center">
-<div id="fadeshow1"></div>
-</div>
+<body>
 
-<div id="fadeshow1toggler" style="width:{{ photo_width }}; text-align:center; margin-top:10px">
-<a href="#" class="prev"><img src="/static/implication-arrow-left.png" style="border-width:0" width="{% widthratio 5 100 photo_width %}" height="{% widthratio 5 100 photo_height %}" /></a>  <span class="status" style="margin:0 50px; font-weight:bold"></span> <a href="#" class="next"><img src="/static/implication-arrow-right.png" style="border-width:0" width="{% widthratio 5 100 photo_width %}"" height="{% widthratio 5 100 photo_height %}"/></a>
-</div>
+</style>
+  <div class="slideshow" align="center">
+    {% for img in images %}
+    <div>
+      <img src="{{ img.url }}" width="{{ photo_width }}" height="{{ photo_height }}">
+      <div style="width:{{ photo_width }}px">
+        <img class="prev" src="/static/implication-arrow-left.png" style="float:left" width={% widthratio 6 100 photo_width %} height={% widthratio 4 100 photo_height %}>
+        <img class="next" src="/static/implication-arrow-right.png"  style="float:right" width={% widthratio 6 100 photo_width %} height={% widthratio 4 100 photo_height %}>
+        <b">{{ img.title }}</b>
+      </div>
+      <br/>
+      <i>{{ img.desc}}</i>
+    </div>
+    {% endfor %}
+  </div>
+
+
+
+
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.slideshow').slick({
+        lazyLoad: 'ondemand',
+        slidesToShow: 1,
+        draggable: false,
+        speed: 0,
+        prevArrow: $(".prev"),
+        nextArrow: $(".next"),
+        respondTo: 'slider'
+      });
+    });
+  </script>
+</body>
+
