@@ -1,0 +1,18 @@
+{% extends 'cvsite/base.html' %}
+
+{% block content %}
+
+<head>
+  <title>photography</title>
+</head>
+
+<div style="width:40%; min-width:500px">
+  {% for proj in projects %}
+  <div>
+    <h4><a href="{{ proj.url }}">{{ proj.title }}</a></h4>
+    <p>{{ proj.desc }}</p>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

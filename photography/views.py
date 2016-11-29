@@ -6,7 +6,23 @@ from django.http import HttpResponse
 from django.template import loader
 
 def index(request):
-  return HttpResponse("look at my Power Lines project - it's right <a href=\"powerlines\">here</a>")
+  template = loader.get_template('photography/index.html')
+  context = {
+    'projects': [
+      {
+        'title': "Power Lines: Land Scraped",
+        'url': "powerlines-landscraped",
+        'desc': "pwrln mfn lndscps"
+      },
+
+      {
+        'title': "Power Lines: Sketches",
+        'url': "powerlines-sketches",
+        'desc': "sum dang pwrln slhtts"
+      }
+    ]
+  }
+  return HttpResponse(template.render(context, request))
 
 def project(request):
   template = loader.get_template('photography/project.html')
