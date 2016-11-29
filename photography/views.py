@@ -8,6 +8,7 @@ from django.template import loader
 def index(request):
   template = loader.get_template('cvsite/proj-index.html')
   context = {
+    'page_name': "photohraphy",
     'projects': [
       {
         'title': "Power Lines: Land Scraped",
