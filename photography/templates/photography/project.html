@@ -11,25 +11,21 @@
 
 </head>
 <body>
-
-</style>
-  <div class="slideshow" align="center">
-    {% for img in images %}
-    <div>
-      <img src="{{ img.url }}" width="{{ photo_width }}" height="{{ photo_height }}">
-      <div style="width:{{ photo_width }}px">
-        <img class="prev" src="/static/implication-arrow-left.png" style="float:left" width={% widthratio 6 100 photo_width %} height={% widthratio 4 100 photo_height %}>
-        <img class="next" src="/static/implication-arrow-right.png"  style="float:right" width={% widthratio 6 100 photo_width %} height={% widthratio 4 100 photo_height %}>
-        <b>{{ img.title }}</b>
+    <div class="slideshow" align="center">
+      {% for img in images %}
+      <div align="center" style="outline:none; height:auto; margin:30px">
+        <h3 style="margin:0">{{ project_name }}</h3>
+        <img src="{{ img.url }}" width="{{ photo_width }}" height="{{ photo_height }}" style="margin:15px">
+        <div style="width:40%; min-width:500px">
+          <img class="prev" src="/static/implication-arrow-left.png" style="float:left; cursor:pointer" width={% widthratio 6 100 photo_width %} height={% widthratio 6 100 photo_height %}>
+          <img class="next" src="/static/implication-arrow-right.png"  style="float:right; cursor:pointer" width={% widthratio 6 100 photo_width %} height={% widthratio 6 100 photo_height %}>
+          <b>{{ img.title }}</b>
+          <br>
+          <i>{{ img.desc}}</i>
+        </div>
       </div>
-      <br/>
-      <i>{{ img.desc}}</i>
+      {% endfor %}
     </div>
-    {% endfor %}
-  </div>
-
-
-
 
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -38,13 +34,14 @@
   <script type="text/javascript">
     $(document).ready(function(){
       $('.slideshow').slick({
-        lazyLoad: 'ondemand',
+        lazyLoad: 'ondemand', 
         slidesToShow: 1,
         draggable: false,
         speed: 0,
+        variableHeight: true,
         prevArrow: $(".prev"),
         nextArrow: $(".next"),
-        respondTo: 'slider'
+        responTo: "window"
       });
     });
   </script>
