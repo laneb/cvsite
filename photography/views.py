@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from django.template import loader
 
 def index(request):
-  template = loader.get_template('photography/index.html')
+  template = loader.get_template('cvsite/proj-index.html')
   context = {
     'projects': [
       {
