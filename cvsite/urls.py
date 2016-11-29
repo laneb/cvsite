@@ -20,6 +20,7 @@ from . import views
 
 urlpatterns = [
 	url(r'^$', views.index, name='index'),
+  url(r'^about_site/$', views.about, name='about'),
   url(r'^mathematics/', include('mathematics.urls')),
   url(r'^programming/', include('programming.urls')),
   url(r'^photography/', include('photography.urls')),
