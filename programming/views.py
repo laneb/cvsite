@@ -23,7 +23,7 @@ def index(request):
       {
         'title': "this website",
         'url': "http://github.com/laneb/cvsite",
-        'desc': "the Djanto application that powers this site"
+        'desc': "the Django application that powers this site"
       }
     ]
   }
