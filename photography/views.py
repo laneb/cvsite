@@ -10,7 +10,7 @@ import re
 projects_by_path = {
   'powerlines-landscraped': {
     'title': "power lines: land, scraped",
-    'desc': "an investigation of the role of power lines in the creation of landscapes",
+    'desc': "an investigation of the role of power lines in the creation  and destruction of landscapes",
     'url': "powerlines-landscraped",
     'images': [
       {
