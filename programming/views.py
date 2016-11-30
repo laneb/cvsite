@@ -11,7 +11,7 @@ def index(request):
     'page_name': "programming",
     'projects': [
       {
-        'title': "conruence solver",
+        'title': "congruence solver",
         'url': "http://github.com/laneb/congruence_solver",
         'desc': "this shit solves those plynml cngrncs"
       }
