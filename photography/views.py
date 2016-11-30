@@ -37,7 +37,7 @@ projects_by_path = {
   },
 
   'powerlines-sketches': {
-    'title': "Power Lines: Sketches",
+    'title': "power lines: sketches",
     'desc': "line drawings on the sky",
     'url': 'powerlines-sketches',
     'images': [
