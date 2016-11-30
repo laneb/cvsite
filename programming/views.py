@@ -13,7 +13,17 @@ def index(request):
       {
         'title': "congruence solver",
         'url': "http://github.com/laneb/congruence_solver",
-        'desc': "this shit solves those plynml cngrncs"
+        'desc': "a C library and a ruby cli for solving polynomial congruences, a topic from elementary number theory"
+      },
+      {
+        'title': "spark modularized view (smv)",
+        'url': "http://github.com/tresamigossd/smv",
+        'desc': "a extension of the spark big data framework that facilitates scalability, modularity, and rapid development of small and large applications"
+      },
+      {
+        'title': "this website",
+        'url': "http://github.com/laneb/cvsite",
+        'desc': "the Djanto application that powers this site"
       }
     ]
   }
