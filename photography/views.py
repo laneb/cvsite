@@ -9,8 +9,8 @@ import re
 
 projects_by_path = {
   'powerlines-landscraped': {
-    'title': "Power Lines: Land, Scraped",
-    'desc': "sum pwr lns 2",
+    'title': "power lines: land, scraped",
+    'desc': "an investigation of the role of power lines in the creation of landscapes",
     'url': "powerlines-landscraped",
     'images': [
       {
@@ -35,10 +35,10 @@ projects_by_path = {
       }
     ]
   },
-  
+
   'powerlines-sketches': {
     'title': "Power Lines: Sketches",
-    'desc': "pwrln mfn lndscps",
+    'desc': "line drawings on the sky",
     'url': 'powerlines-sketches',
     'images': [
       {
