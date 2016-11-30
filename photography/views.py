@@ -8,6 +8,34 @@ from django.template import loader
 import re
 
 projects_by_path = {
+  'powerlines-landscraped': {
+    'title': "Power Lines: Land, Scraped",
+    'desc': "sum pwr lns 2",
+    'url': "powerlines-landscraped",
+    'images': [
+      {
+        'url': "http://lanebarlow.s3.amazonaws.com/_MG_4785.jpg",
+        'title': "morning on the ridge",
+        'desc': 'inkjet on paper'
+      },
+      {
+        'url': "http://lanebarlow.s3.amazonaws.com/_MG_4957.jpg",
+        'title': "recent developments",
+        'desc': 'inkjet on paper'
+      },
+      {
+        'url': "http://lanebarlow.s3.amazonaws.com/_MG_3916.jpg",
+        'title': "obelisk",
+        'desc': 'inkjet on paper'
+      },
+      {
+        'url': "http://lanebarlow.s3.amazonaws.com/_MG_4725.jpg",
+        'title': "reprieve",
+        'desc': 'inkjet on paper'
+      }
+    ]
+  },
+  
   'powerlines-sketches': {
     'title': "Power Lines: Sketches",
     'desc': "pwrln mfn lndscps",
@@ -36,34 +64,6 @@ projects_by_path = {
       {
         'url': "http://lanebarlow.s3.amazonaws.com/_MG_4237.jpg",
         'title': "untitled (4)",
-        'desc': 'inkjet on paper'
-      }
-    ]
-  },
-
-  'powerlines-landscraped': {
-    'title': "Power Lines: Land, Scraped",
-    'desc': "sum pwr lns 2",
-    'url': "powerlines-landscraped",
-    'images': [
-      {
-        'url': "http://lanebarlow.s3.amazonaws.com/_MG_4785.jpg",
-        'title': "morning on the ridge",
-        'desc': 'inkjet on paper'
-      },
-      {
-        'url': "http://lanebarlow.s3.amazonaws.com/_MG_4957.jpg",
-        'title': "recent developments",
-        'desc': 'inkjet on paper'
-      },
-      {
-        'url': "http://lanebarlow.s3.amazonaws.com/_MG_3916.jpg",
-        'title': "obelisk",
-        'desc': 'inkjet on paper'
-      },
-      {
-        'url': "http://lanebarlow.s3.amazonaws.com/_MG_4725.jpg",
-        'title': "reprieve",
         'desc': 'inkjet on paper'
       }
     ]
