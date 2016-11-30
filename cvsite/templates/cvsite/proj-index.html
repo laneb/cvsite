@@ -2,15 +2,14 @@
 
 {% block content %}
 
-<head>
   <title>{{ page_name }}</title>
-</head>
+  <link rel="stylesheet" type="text/css" href="/static/proj-index.css">
 
 <div style="width:40%; min-width:500px">
   {% for proj in projects %}
   <div>
-    <h4><a href="{{ proj.url }}">{{ proj.title }}</a></h4>
-    <p>{{ proj.desc }}</p>
+    <h4 class="proj-title"><a href="{{ proj.url }}">{{ proj.title }}</a></h4>
+    <p class="proj-desc">{{ proj.desc }}</p>
   </div>
   {% endfor %}
 </div>

@@ -2,6 +2,14 @@ body {
 
 }
 
+#app-content {
+  margin:30px;
+}
+
+a {
+  color: grey;
+}
+
 a:link {
   text-decoration: none;
 }
