@@ -18,7 +18,7 @@ def index(request):
       {
         'title': "spark modularized view (smv)",
         'url': "http://github.com/tresamigossd/smv",
-        'desc': "a extension of the spark big data framework that facilitates scalability, modularity, and rapid development of small and large applications"
+        'desc': "an extension of the spark big data framework that facilitates scalability, modularity, and rapid development of small and large applications"
       },
       {
         'title': "this website",
