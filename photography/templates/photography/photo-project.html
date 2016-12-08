@@ -14,7 +14,7 @@
     {% for img in images %}
     <div align="center" style="outline:none; height:auto">
       <h3 style="margin:0">{{ project_name }}</h3>
-      <img src="{{ photo_bucket }}/{{ img.file }}" width="{{ photo_width }}" height="{{ photo_height }}" style="margin:15px">
+      <img src="{{ bucket_url }}/{{ img.file }}" width="{{ photo_width }}" height="{{ photo_height }}" style="margin:15px">
       <div style="width:40%; min-width:500px">
         <img class="prev" src="/static/implication-arrow-left.png" style="float:left; cursor:pointer" width={% widthratio 6 100 photo_width %} height={% widthratio 6 100 photo_height %}>
         <img class="next" src="/static/implication-arrow-right.png"  style="float:right; cursor:pointer" width={% widthratio 6 100 photo_width %} height={% widthratio 6 100 photo_height %}>
@@ -26,9 +26,9 @@
     {% endfor %}
   </div>
 
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 
 <script type="text/javascript">
   $(document).ready(function(){

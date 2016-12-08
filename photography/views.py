@@ -7,13 +7,14 @@ from django.template import loader
 
 import re
 
-PHOTO_BUCKET="http://lanebarlow.s3.amazonaws.com"
+PHOTO_DOMAIN="http://lanebarlow.s3.amazonaws.com/photography"
 
 projects_by_path = {
   'powerlines-landscraped': {
     'title': "power lines: land, scraped",
     'desc': "an investigation of the role of power lines in the creation  and destruction of landscapes",
     'url': "powerlines-landscraped",
+    'bucket': "powerlines-landscraped",
     'images': [
       {
         'file': "_MG_4785.jpg",
@@ -42,6 +43,7 @@ projects_by_path = {
     'title': "power lines: sketches",
     'desc': "line drawings on the sky",
     'url': 'powerlines-sketches',
+    'bucket': "powerlines-sketches",
     'images': [
       {
         'file': "_MG_2507.jpg",
@@ -88,7 +90,7 @@ def project(request):
   project = projects_by_path[project_path]
 
   context = {
-    'photo_bucket': PHOTO_BUCKET,
+    'bucket_url': PHOTO_DOMAIN + '/' + project['bucket'],
     'project_name': project['title'],
     'images': project['images'],
     'photo_height': 624,
