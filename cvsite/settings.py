@@ -24,8 +24,8 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = "inwy7#y29twl^$%mn)v*@tw485tf(yj0l3q(mhe7$jaeznb+oi"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
+DEBUG = not bool(os.environ.get('DJANGO_PRODUCTION', ''))
+print("DEBUG=" + str(DEBUG))
 # Application definition
 
 INSTALLED_APPS = [
