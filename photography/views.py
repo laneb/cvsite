@@ -7,6 +7,8 @@ from django.template import loader
 
 import re
 
+PHOTO_BUCKET="http://lanebarlow.s3.amazonaws.com"
+
 projects_by_path = {
   'powerlines-landscraped': {
     'title': "power lines: land, scraped",
@@ -14,22 +16,22 @@ projects_by_path = {
     'url': "powerlines-landscraped",
     'images': [
       {
-        'url': "http://lanebarlow.s3.amazonaws.com/_MG_4785.jpg",
+        'file': "_MG_4785.jpg",
         'title': "morning on the ridge",
         'desc': 'inkjet on paper'
       },
       {
-        'url': "http://lanebarlow.s3.amazonaws.com/_MG_4957.jpg",
+        'file': "_MG_4957.jpg",
         'title': "recent developments",
         'desc': 'inkjet on paper'
       },
       {
-        'url': "http://lanebarlow.s3.amazonaws.com/_MG_3916.jpg",
+        'file': "_MG_3916.jpg",
         'title': "obelisk",
         'desc': 'inkjet on paper'
       },
       {
-        'url': "http://lanebarlow.s3.amazonaws.com/_MG_4725.jpg",
+        'file': "_MG_4725.jpg",
         'title': "reprieve",
         'desc': 'inkjet on paper'
       }
@@ -42,27 +44,27 @@ projects_by_path = {
     'url': 'powerlines-sketches',
     'images': [
       {
-        'url': "http://lanebarlow.s3.amazonaws.com/_MG_2507.jpg",
+        'file': "_MG_2507.jpg",
         'title': "untitled (1)",
         'desc': 'inkjet on paper'
       },
       {
-        'url': "http://lanebarlow.s3.amazonaws.com/_MG_4052.jpg",
+        'file': "_MG_4052.jpg",
         'title': "untitled (2)",
         'desc': 'inkjet on paper'
       },
       {
-        'url': "http://lanebarlow.s3.amazonaws.com/_MG_2519.jpg",
+        'file': "_MG_2519.jpg",
         'title': "torn",
         'desc': 'inkjet on paper'
       },
       {
-        'url': "http://lanebarlow.s3.amazonaws.com/_MG_4559.jpg",
+        'file': "_MG_4559.jpg",
         'title': "untitled (3)",
         'desc': 'inkjet on paper'
       },
       {
-        'url': "http://lanebarlow.s3.amazonaws.com/_MG_4237.jpg",
+        'file': "_MG_4237.jpg",
         'title': "untitled (4)",
         'desc': 'inkjet on paper'
       }
@@ -86,6 +88,7 @@ def project(request):
   project = projects_by_path[project_path]
 
   context = {
+    'photo_bucket': PHOTO_BUCKET,
     'project_name': project['title'],
     'images': project['images'],
     'photo_height': 624,
