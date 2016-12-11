@@ -15,6 +15,8 @@ projects_by_path = {
     'desc': "an investigation of the role of power lines in the creation  and destruction of landscapes",
     'url': "powerlines-landscraped",
     'bucket': "powerlines-landscraped",
+    'photo_width': 926,
+    'photo_height': 624,
     'images': [
       {
         'file': "_MG_4786.jpg",
@@ -59,6 +61,8 @@ projects_by_path = {
     'desc': "line drawings on the sky",
     'url': 'powerlines-sketches',
     'bucket': "powerlines-sketches",
+    'photo_width': 624,
+    'photo_height': 624,
     'images': [
       {
         'file': "_MG_2507.jpg",
@@ -66,23 +70,28 @@ projects_by_path = {
         'desc': 'inkjet on paper'
       },
       {
-        'file': "_MG_4052.jpg",
+        'file': "_MG_4558.jpg",
         'title': "untitled (2)",
         'desc': 'inkjet on paper'
       },
       {
-        'file': "_MG_2519.jpg",
+        'file': "_MG_2521.jpg",
         'title': "torn",
         'desc': 'inkjet on paper'
       },
       {
-        'file': "_MG_4559.jpg",
+        'file': "_MG_4055.jpg",
         'title': "untitled (3)",
         'desc': 'inkjet on paper'
       },
       {
         'file': "_MG_4237.jpg",
         'title': "untitled (4)",
+        'desc': 'inkjet on paper'
+      },
+      {
+        'file': "_MG_4444.jpg",
+        'title': "untitled (5)",
         'desc': 'inkjet on paper'
       }
     ]
@@ -108,7 +117,7 @@ def project(request):
     'bucket_url': PHOTO_DOMAIN + '/' + project['bucket'],
     'project_name': project['title'],
     'images': project['images'],
-    'photo_height': 624,
-    'photo_width': 926
+    'photo_height': project['photo_height'],
+    'photo_width': project['photo_width']
   }
   return HttpResponse(template.render(context, request))
