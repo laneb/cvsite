@@ -17,7 +17,7 @@ projects_by_path = {
     'bucket': "powerlines-landscraped",
     'images': [
       {
-        'file': "_MG_4785.jpg",
+        'file': "_MG_4786.jpg",
         'title': "morning on the ridge",
         'desc': 'inkjet on paper'
       },
@@ -27,12 +27,27 @@ projects_by_path = {
         'desc': 'inkjet on paper'
       },
       {
-        'file': "_MG_3916.jpg",
+        'file': "_MG_5101.jpg",
+        'title': "grove",
+        'desc': "inkjet on paper"
+      },
+      {
+        'file': "_MG_4363.jpg",
+        'title': "road trip",
+        'desc': "inkjet on paper"
+      },
+      {
+        'file': "_MG_3917.jpg",
         'title': "obelisk",
         'desc': 'inkjet on paper'
       },
       {
-        'file': "_MG_4725.jpg",
+        'file': "_MG_5062.jpg",
+        'title': "sinew",
+        "desc": 'inkjet on paper'
+      },
+      {
+        'file': "_MG_4726.jpg",
         'title': "reprieve",
         'desc': 'inkjet on paper'
       }
