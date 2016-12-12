@@ -18,8 +18,8 @@
       <h3 class=project-title>{{ project_name }}</h3>
       <img src="{{ bucket_url }}/{{ img.file }}" width="{{ photo_width }}" height="{{ photo_height }}" class="photo">
       <div class="photo-detail">
-        <img class="prev-btn" class="slide-btn" src="/static/implication-arrow-left.png" width={% widthratio 6 100 photo_width %} height={% widthratio 6 100 photo_height %}>
-        <img class="next-btn" class="slide-btn" src="/static/implication-arrow-right.png" width={% widthratio 6 100 photo_width %} height={% widthratio 6 100 photo_height %}>
+        <img class="prev-btn" class="slide-btn" src="/static/implication-arrow-left.png" width="50px" height="30px">
+        <img class="next-btn" class="slide-btn" src="/static/implication-arrow-right.png" width="50px" height="30px">
         <b>{{ img.title }}</b>
         <br>
         <i>{{ img.desc }}</i>
@@ -40,8 +40,8 @@
       draggable: false,
       speed: 0,
       variableHeight: true,
-      prevArrow: $("#pre-btn"),
-      nextArrow: $("#next-btn"),
+      prevArrow: $(".prev-btn"),
+      nextArrow: $(".next-btn"),
       responTo: "window"
     });
   });
