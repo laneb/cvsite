@@ -2,9 +2,44 @@ body {
   font-family: "Helvetica";
 }
 
-#app-content {
+#header {
+
+}
+
+#nav-menu {
+  width: 40%;
+  min-width: 500px;
+}
+
+.nav-link {
+  margin: 0;
+}
+
+#prgrm-nav-link {
+  float: left;
+}
+
+#math-nav-link {
+  display: inline-block;
+}
+
+#photo-nav-link {
+  float: right;
+}
+
+#content {
   margin:25px;
 }
+
+#footer {
+  width: 40%;
+  min-width: 500px;
+}
+
+.footer-text {
+  margin: 3px;
+}
+
 
 a {
   color: grey;
