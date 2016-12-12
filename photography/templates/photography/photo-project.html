@@ -4,20 +4,22 @@
 
 <head>
   <title>{{ project_name }} - Lane Barlow </title>
+
+  <link rel="stylesheet" type="text/css" href="/static/photo-project.css"/>
   
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
 
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
 
 </head>
-  <div class="slideshow" align="center">
+  <div id="slideshow" align="center">
     {% for img in images %}
-    <div align="center" style="outline:none; height:auto">
-      <h3 style="margin:0">{{ project_name }}</h3>
-      <img src="{{ bucket_url }}/{{ img.file }}" width="{{ photo_width }}" height="{{ photo_height }}" style="margin:15px">
-      <div style="width:40%; min-width:500px">
-        <img class="prev" src="/static/implication-arrow-left.png" style="float:left; cursor:pointer" width={% widthratio 6 100 photo_width %} height={% widthratio 6 100 photo_height %}>
-        <img class="next" src="/static/implication-arrow-right.png"  style="float:right; cursor:pointer" width={% widthratio 6 100 photo_width %} height={% widthratio 6 100 photo_height %}>
+    <div class="slide" align="center">
+      <h3 class=project-title>{{ project_name }}</h3>
+      <img src="{{ bucket_url }}/{{ img.file }}" width="{{ photo_width }}" height="{{ photo_height }}" class="photo">
+      <div class="photo-detail">
+        <img class="prev-btn" class="slide-btn" src="/static/implication-arrow-left.png" width={% widthratio 6 100 photo_width %} height={% widthratio 6 100 photo_height %}>
+        <img class="next-btn" class="slide-btn" src="/static/implication-arrow-right.png" width={% widthratio 6 100 photo_width %} height={% widthratio 6 100 photo_height %}>
         <b>{{ img.title }}</b>
         <br>
         <i>{{ img.desc }}</i>
@@ -32,14 +34,14 @@
 
 <script type="text/javascript">
   $(document).ready(function(){
-    $('.slideshow').slick({
+    $('#slideshow').slick({
       lazyLoad: 'ondemand', 
       slidesToShow: 1,
       draggable: false,
       speed: 0,
       variableHeight: true,
-      prevArrow: $(".prev"),
-      nextArrow: $(".next"),
+      prevArrow: $("#pre-btn"),
+      nextArrow: $("#next-btn"),
       responTo: "window"
     });
   });

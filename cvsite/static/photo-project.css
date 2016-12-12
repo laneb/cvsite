@@ -1,0 +1,30 @@
+.slide {
+  /*Must be marked important because slick creates contradictory inline styling*/
+  outline: none !important;
+  height: auto !important;
+}
+
+.project-title {
+  margin: 0;
+}
+
+.photo {
+  margin: 15px; 
+}
+
+.photo-detail {
+  width: 40%;
+  min-width: 500px;
+}
+
+.slide-btn {
+  cursor: pointer;
+}
+
+.prev-btn {
+  float:left;
+}
+
+.next-btn {
+  float: right;
+}
