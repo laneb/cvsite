@@ -12,7 +12,7 @@ PHOTO_DOMAIN="http://lanebarlow.s3.amazonaws.com/photography"
 projects_by_path = {
   'powerlines-landscraped': {
     'title': "power lines: land, scraped",
-    'desc': "an investigation of the role of power lines in the creation  and destruction of landscapes",
+    'desc': "inspired in significant part by phel steinmetz's 'landscrapes', this sequence investigates the role of power lines in the creation and destruction of landscapes",
     'url': "powerlines-landscraped",
     'bucket': "powerlines-landscraped",
     'photo_width': 926,
@@ -20,7 +20,7 @@ projects_by_path = {
     'images': [
       {
         'file': "_MG_4786.jpg",
-        'title': "morning on the ridge",
+        'title': "the ridge",
         'desc': 'inkjet on paper'
       },
       {
@@ -34,14 +34,14 @@ projects_by_path = {
         'desc': "inkjet on paper"
       },
       {
-        'file': "_MG_4363.jpg",
-        'title': "road trip",
-        'desc': "inkjet on paper"
-      },
-      {
         'file': "_MG_3917.jpg",
         'title': "obelisk",
         'desc': 'inkjet on paper'
+      },
+      {
+        'file': "_MG_4363.jpg",
+        'title': "road trip",
+        'desc': "inkjet on paper"
       },
       {
         'file': "_MG_5062.jpg",
@@ -58,7 +58,7 @@ projects_by_path = {
 
   'powerlines-sketches': {
     'title': "power lines: sketches",
-    'desc': "line drawings on the sky",
+    'desc': "a reduction of power lines to silhouette line drawings against dynamic canvases",
     'url': 'powerlines-sketches',
     'bucket': "powerlines-sketches",
     'photo_width': 624,
